@@ -22,6 +22,11 @@ npm run reset-project
 ```js
   the first step is to create app folder and _layout.jsx and index.jsx files and return any text
 ```
+
+### First Lesson : Know how to navigate inside ur app 
+```js
+  Loading.. 
+```
 ### Breakdown of Key Folders:
 ```bash
 
@@ -39,27 +44,34 @@ constants/ – Defines constant values like colors, routes, and action types.
 
 ```bash
 /todo-app
-│── /src
-│   │── /components        
-│   │   │── TaskItem.js    
-│   │── /screens           
-│   │   │── HomeScreen.js  
-│   │── /navigation        
-│   │   │── AppNavigator.js
-│   │── /context           
-│   │   │── TaskContext.js 
-│   │── /services          
-│   │   │── storage.js     
-│   │── /utils             
-│   │   │── helpers.js     
-│   │── /constants         
-│   │   │── colors.js      
-│   │── App.js             
-│   │── index.js           
-│
-│── /assets                
-│── package.json           
-│── .gitignore             
-│── README.md              
+│── assets/                # Static assets (images, icons, fonts)
+│── src/                   # Source code
+│   ├── components/        # Reusable UI components
+│   │   ├── TaskItem.js    # Single task component
+│   │   ├── Button.js      # Custom button component
+│   │   ├── Input.js       # Custom input field
+│   ├── screens/           # App screens
+│   │   ├── HomeScreen.js  # Main to-do list screen
+│   │   ├── AddTaskScreen.js # Screen to add tasks
+│   ├── navigation/        # App navigation setup
+│   │   ├── AppNavigator.js # Stack or Tab navigation
+│   ├── context/           # Context API (if using)
+│   │   ├── TaskContext.js  # Context for managing tasks
+│   ├── hooks/             # Custom hooks
+│   │   ├── useTasks.js     # Hook for managing tasks
+│   ├── utils/             # Utility/helper functions
+│   │   ├── storage.js      # AsyncStorage functions
+│   ├── config/            # Configuration files
+│   │   ├── colors.js       # Theme colors
+│   ├── styles/            # Global styles (optional)
+│   │   ├── global.js       # Global styles file
+│   ├── App.js             # Main entry point
+│── .expo/                 # Expo-related files (auto-generated)
+│── .gitignore             # Git ignore file
+│── app.json               # Expo app configuration
+│── babel.config.js        # Babel configuration
+│── package.json           # Dependencies and scripts
+│── README.md              # Project documentation
+
 
 ```
