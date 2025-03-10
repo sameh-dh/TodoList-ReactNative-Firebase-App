@@ -25,7 +25,16 @@ npm run reset-project
 
 ### First Lesson : Know how to navigate inside ur app 
 ```js
-  Loading.. 
+  //First thing you have to know that the best navigation approach is to use Drawer + Tabs + Stack. 
+Tabs: Ideal for common pages like Home, Profile, and Settings.
+Stack: Great for workflows like opening a task’s details from Home.
+Drawer: Best for accessing less-used pages like Help, About, or Logout.
+```
+```js
+//In this simple to do app we will use only stack navigation so i'll explain how to set it up so we can start properly: 
+// First of all you'll have to return AppNavigator in your app or index file bc we will add to it all the screens to navigate between them easly "always look for the right way to do it and not the easiest"
+
+
 ```
 ### Breakdown of Key Folders:
 ```bash
