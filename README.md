@@ -10,8 +10,9 @@ I created this project to deepen my understanding of React Native through hands-
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 <hr />
 
-* [Set up project 🤗](#project-Set-up-bash-commands)
-* [First Lesson : Know how to navigate inside ur app ☺️](#First-Lesson-:-Know-how-to-navigate-inside-ur-app)
+* [Set up project 🤗](#project-set-up-bash-commands)
+
+* [First Lesson : Know how to navigate inside your app ☺️](#know-how-to-navigate-inside-your-app)
 
 <hr />
 
@@ -28,7 +29,7 @@ npm run reset-project
   the first step is to create app folder and _layout.jsx and index.jsx files and return any text
 ```
 
-## First Lesson : Know how to navigate inside ur app
+## Know how to navigate inside your app
 
 
 
