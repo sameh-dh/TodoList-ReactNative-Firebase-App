@@ -11,7 +11,7 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 <hr />
 
 * [Set up project 🤗](#project-Set-up-bash-commands)
-* [First Lesson : Know how to navigate inside ur app ☺️](First-Lesson-:-Know-how-to-navigate-inside-ur-app)
+* [First Lesson : Know how to navigate inside ur app ☺️](#First-Lesson-:-Know-how-to-navigate-inside-ur-app)
 
 <hr />
 
