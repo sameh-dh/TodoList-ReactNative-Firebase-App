@@ -8,10 +8,10 @@ I created this project to deepen my understanding of React Native through hands-
 <hr></hr>
 <a id="readme-top"></a>
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+<hr />
 
 * [Set up project 🤗](#project-Set-up-bash-commands)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## project Set-up bash commands 🤗
 
@@ -30,7 +30,7 @@ npm run reset-project
 
 
 
-  1. First thing you have to know that the best navigation approach is to use Drawer + Tabs + Stack.
+  1. <b> First thing </b>you have to know that the best navigation approach is to use Drawer + Tabs + Stack.  
 Tabs: Ideal for common pages like Home, Profile, and Settings.
 Stack: Great for workflows like opening a task’s details from Home.
 Drawer: Best for accessing less-used pages like Help, About, or Logout.
@@ -65,16 +65,16 @@ export default AppNavigator;
 ```
 
 
-4. let's say you want to navigate between HomeScreen and AboutScreen:
+4. let's say you want to<b> navigate </b> between HomeScreen and AboutScreen:
 there are two ways to navigate between screens
-* First one : by using navigation propos
-* Seconde one : by using navigation hooks
+* First one : by using <b>navigation propos</b>
+* Seconde one : by using <b>navigation hooks</b>
  the difference betwwen them is that the propos is accessed only in screen component and the hook can be used in any screen component <br/>
 =>  so as conclusion use navigation propos for all screen components and use navigation hook only when it is necessairly  <br/><br/>
 
 
  
-5. Now to understand the concept we should test it : 
+5. Now to understand the concept we should <b> test it </b>: 
 
 * So it's so simple to use navigaiton propos just add the propos and use it to navigate like this :
 
@@ -98,7 +98,7 @@ const HomeScreen = ({ navigation }) => {
 import { useNavigation } from "@react-navigation/native";
 
 const HomeScreen = () => {
-  
+
   const navigation = useNavigation();
 
   return (
@@ -112,6 +112,10 @@ const HomeScreen = () => {
   );
 };
 ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<hr />
 
 ### Breakdown of Key Folders:
 
