@@ -11,7 +11,9 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 <hr />
 
 * [Set up project 🤗](#project-Set-up-bash-commands)
+* [First Lesson : Know how to navigate inside ur app ☺️](First-Lesson-:-Know-how-to-navigate-inside-ur-app)
 
+<hr />
 
 ## project Set-up bash commands 🤗
 
@@ -26,7 +28,7 @@ npm run reset-project
   the first step is to create app folder and _layout.jsx and index.jsx files and return any text
 ```
 
-### First Lesson : Know how to navigate inside ur app
+## First Lesson : Know how to navigate inside ur app
 
 
 
