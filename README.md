@@ -7,12 +7,17 @@ I created this project to deepen my understanding of React Native through hands-
 <h3>💙 Enjoy this journey into the world of React Native! 💙</h3>
 <hr></hr>
 <a id="readme-top"></a>
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+
+This is an [Expo]=project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+
 <hr />
 
 * [Set up project 🤗](#project-set-up-bash-commands)
 
-* [First Lesson : Know how to navigate inside your app ☺️](#know-how-to-navigate-inside-your-app)
+* [First Lesson : Learn how to navigate inside your app ☺️](#learn-how-to-navigate-inside-your-app)
+
+* [Seconde Lesson : Learn a new hook called useContext ](#learn-about-usecontext-hook)
+
 
 <hr />
 
@@ -28,15 +33,18 @@ npm run reset-project
 ```js
   the first step is to create app folder and _layout.jsx and index.jsx files and return any text
 ```
+<!-- $$ to center the text and one $ to set text in the left side-->
 
-## Know how to navigate inside your app
+## $${\color{pink}Learn-How-To-Navigate-Inside-Your-App}$$
+
+## Learn how to navigate inside your app
 
 
 
-  1. <b> First thing </b>you have to know that the best navigation approach is to use Drawer + Tabs + Stack.  
-Tabs: Ideal for common pages like Home, Profile, and Settings.
-Stack: Great for workflows like opening a task’s details from Home.
-Drawer: Best for accessing less-used pages like Help, About, or Logout.
+  1. <b> First thing </b>you have to know that the best navigation approach is to use Drawer + Tabs + Stack.  <br/>
+<b>Tabs</b>: Ideal for common pages like Home, Profile, and Settings.<br/>
+<b>Stack</b>: Great for workflows like opening a task’s details from Home.<br/>
+<b>Drawer</b>: Best for accessing less-used pages like Help, About, or Logout.<br/>
 
 
 
@@ -118,7 +126,48 @@ const HomeScreen = () => {
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## $${\color{pink}Learn-About-useContext-Hook}$$	
+
+## Learn About useContext Hook
+
+
+<!-- ```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+``` -->
+
+
+<!-- > [!NOTE]
+> Highlights information that users should take into account, even when skimming.
+
+> [!TIP]
+> Optional information to help a user be more successful.
+
+> [!IMPORTANT]
+> Crucial information necessary for users to succeed.
+
+> [!WARNING]
+> Critical content demanding immediate user attention due to potential risks.
+
+> [!CAUTION]
+> Negative potential consequences of an action. -->
+
+1. why useContext : <br/>
+You use useContext in React when you want to avoid prop drilling (passing props through multiple levels of components) and need a way to share data globally across your component tree. and For small to medium-sized apps, using external state management libraries like Redux or Zustand might be overkill. These libraries add complexity and boilerplate code, useContext provides a lightweight way to manage and share state without needing additional libraries. <br /><br />
+2. When Not to Use useContext:<br/>
+While useContext is great for sharing global state, it has some limitations:<br/>
+Performance Issues: If the context value changes frequently, all components consuming that context will re-render, which can lead to performance problems in large apps.
+Complex State Management: For large apps with complex state logic, libraries like Redux, Zustand, or Recoil might be more suitable.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <hr />
+
+## $${\color{pink}Key-Folders}$$	
+
 
 ### Breakdown of Key Folders:
 
