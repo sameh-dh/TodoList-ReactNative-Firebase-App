@@ -33,7 +33,6 @@ npm run reset-project
 ```js
   the first step is to create app folder and _layout.jsx and index.jsx files and return any text
 ```
-<!-- $$ to center the text and one $ to set text in the left side-->
 
 ## $${\color{pink}Learn-How-To-Navigate-Inside-Your-App}$$
 
