@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React, {createContext,useState} from 'react'
 
-const TaskContext = createContext();
+export const TaskContext = createContext();
     
  const TaskProvider=({children}) =>{
     const [tasks, setTasks] =useState([]);

@@ -163,6 +163,46 @@ Complex State Management: For large apps with complex state logic, libraries lik
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+3. How useContext Works:<br/>
+
+* Create a Context: First, you create a context using React.createContext(). This returns a context object with a Provider and a Consumer.
+
+* Provide the Context Value: Use the Provider component to wrap the part of the component tree where you want the context to be available. The Provider accepts a value prop, which is the data you want to share.
+
+* Consume the Context Value: Inside any child component, you can use the useContext hook to access the value provided by the nearest Provider for that context.
+
+```js
+import React, { useContext, createContext } from 'react';
+
+// Step 1: Create a context
+const ThemeContext = createContext();
+
+// Step 2: Provide the context value
+function App() {
+  return (
+    <ThemeContext.Provider value="dark">
+      <Toolbar />
+    </ThemeContext.Provider>
+  );
+}
+
+function Toolbar() {
+  return (
+    <div>
+      <ThemedButton />
+    </div>
+  );
+}
+
+// Step 3: Consume the context value
+function ThemedButton() {
+  const theme = useContext(ThemeContext); // Access the context value
+  return <button style={{ background: theme === 'dark' ? '#333' : '#CCC', color: '#FFF' }}>Themed Button</button>;
+}
+
+export default App;
+
+```
 <hr />
 
 ## $${\color{pink}Key-Folders}$$	

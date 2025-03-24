@@ -5,8 +5,8 @@ import TaskItem from '../components/TaskItem';
 
 const HomeScreen = ({ navigation }) => {
 
-  const {tasks} =useContext(TaskContext)
-  
+  const {tasks} = useContext(TaskContext)
+
   return(
     <View>
         <Text>To-Do List</Text>
