@@ -16,7 +16,7 @@ This is an [Expo]=project created with [`create-expo-app`](https://www.npmjs.com
 
 - [First Lesson : Learn how to navigate inside your app ☺️](#learn-how-to-navigate-inside-your-app)
 
-- [Seconde Lesson : Learn a new hook called useContext ](#learn-about-usecontext-hook)
+- [Seconde Lesson : Learn a new hook called useContext 🤍](#learn-about-usecontext-hook)
 
 <hr />
 
