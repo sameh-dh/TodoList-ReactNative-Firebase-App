@@ -10,8 +10,9 @@ const HomeScreen = ({ navigation }) => {
     <View>
         <Text>To-Do List</Text>
         {tasks.map((task, index) =>{
-          <TaskItem key={index} task={task} />
+          return <TaskItem key={index} task={task} />
         })}
+        
         <Button 
         title="Add Task"
          OnPress ={()=> navigation.navigate('AddTask')}/>
