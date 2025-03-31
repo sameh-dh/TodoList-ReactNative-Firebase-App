@@ -252,4 +252,4 @@ constants/ – Defines constant values like colors, routes, and action types.
 
 
 ```
-<img src="./assets/images/AppFunctionalityPart-1.svg" >
+<img src="./assets/images/AppFunctionalityPart-1Black.svg" >
