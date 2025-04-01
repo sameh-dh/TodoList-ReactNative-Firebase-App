@@ -1,5 +1,5 @@
 # Hello everyone 🌸
-
+<h1>This project is in progress and is expected to be completed by April 25, 2025. </h1>
 <p>
 I created this project to deepen my understanding of React Native through hands-on implementation. Along the way, I documented key concepts and insights that I believe will serve as a valuable reference when revisiting this project. Detailed documentation is crucial for navigating older projects effectively, so take your time, stay focused, and don't get discouraged!
 </p>
