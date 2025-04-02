@@ -1,16 +1,24 @@
 import React, { useContext, useState } from "react";
-import { View, Text, Button, StyleSheet, Pressable } from "react-native";
+import { View, Text, Button, StyleSheet, Pressable, TextInput } from "react-native";
 import { TaskContext } from "../context/TaskContext";
 import TaskItem from "../components/TaskItem";
+import AddTaskScreen from "./AddTaskScreen";
+import { useTasks } from "../hooks/useTasks";
 
 const HomeScreen = ({ navigation }) => {
 
   const { tasks } = useContext(TaskContext);
+  const [task, setTask] = useState("");
+  const { addTask } = useTasks();
 
   const [isPressed, setIsPressed] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-
+  const handleAddTask =  () => {
+ addTask(task);
+    setTask(""); 
+    // navigation.goBack();
+  };
   const handlePressIn = () => setIsPressed(true);
   const handlePressOut = () => setIsPressed(false);
   const handleFocus = () => setIsFocused(true);
@@ -33,7 +41,13 @@ const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text>To-Do List</Text>
-      {tasks.map((task, index) => {
+<TextInput
+        placeholder="EnterTask"
+        value={task}
+        onChangeText={(e) => setTask(e)}
+        style={{ backgroundColor: "pink", width: "50px" }}
+      ></TextInput>
+            {tasks.map((task, index) => {
         return <TaskItem key={index} task={task} />;
       })}
 
@@ -45,13 +59,13 @@ const HomeScreen = ({ navigation }) => {
        onBlur={handleBlur}
        onHoverIn={() => setIsHovered(true)}
        onHoverOut={() => setIsHovered(false)}
-        onPress={() => navigation.navigate("AddTask")}
+       onPress={() => handleAddTask()}
       >
         
         <Text style={(pressed)=>[
           styles.homeTextButton,
           pressed && styles.homeTextButtonPressed
-        ]}>
+        ]}    >
           Add Task
         </Text>
      
