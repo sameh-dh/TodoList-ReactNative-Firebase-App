@@ -7,12 +7,12 @@ const AddTaskScreen = ({ navigation,task  }) => {
   
   return (
     <View>
-      <TextInput
+      {/* <TextInput
         placeholder="EnterTask"
         value={task}
         onChangeText={setTask}
         style={{ backgroundColor: "pink", width: "50px" }}
-      ></TextInput>
+      ></TextInput> */}
     </View>
   );
 };

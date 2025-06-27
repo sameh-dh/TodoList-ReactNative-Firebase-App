@@ -4,6 +4,7 @@ import { TaskContext } from "../context/TaskContext";
 import TaskItem from "../components/TaskItem";
 import AddTaskScreen from "./AddTaskScreen";
 import { useTasks } from "../hooks/useTasks";
+import Input from "../components/Input";
 
 const HomeScreen = ({ navigation }) => {
 
@@ -11,6 +12,9 @@ const HomeScreen = ({ navigation }) => {
   const [task, setTask] = useState("");
   const { addTask } = useTasks();
 
+  const SetTasksFunc = (e) => {
+   return setTask(e)
+  }
   const [isPressed, setIsPressed] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
@@ -41,12 +45,8 @@ const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text>To-Do List</Text>
-<TextInput
-        placeholder="EnterTask"
-        value={task}
-        onChangeText={(e) => setTask(e)}
-        style={{ backgroundColor: "pink", width: "50px" }}
-      ></TextInput>
+      <Input InputValue ={task} Func ={SetTasksFunc} />
+
             {tasks.map((task, index) => {
         return <TaskItem key={index} task={task} />;
       })}
