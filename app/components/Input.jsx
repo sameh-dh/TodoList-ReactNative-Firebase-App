@@ -1,19 +1,37 @@
-import { View, Text, TextInput } from 'react-native'
-import React from 'react'
+import { View, Text, TextInput, StyleSheet } from "react-native";
+import React from "react";
 
-const Input = ({InputValue ,Func }) => {
-  
+const Input = ({ InputValue, Func, InputPlaceHolder }) => {
   return (
-    <View>
-      <TextInput placeholder='EnterTask'
-      value={InputValue}
-       onChangeText={(e) => Func(e)}
-        style={{ backgroundColor: "pink", width: "50px" }}
-      >
-
-      </TextInput>
+    <View
+      style={{ width: "100%",  alignItems: "center" }}
+    >
+      <TextInput
+        placeholder={InputPlaceHolder}
+        value={InputValue}
+        onChangeText={(e) => Func(e)}
+        style={styles.InputContainer}
+      ></TextInput>
     </View>
-  )
-}
+  );
+};
 
-export default Input
+export default Input;
+
+const styles = StyleSheet.create({
+  InputContainer: {
+    backgroundColor: "#FFFFFF",
+    opacity: 0.5,
+    marginTop: 20,
+    marginBottom: 20,
+    width: "90%",
+    height: "fit",
+    padding : 14,
+    color: "#545352",
+    textAlign: "center",
+    textAlignVertical : "center",
+    borderRadius: 5,
+    // boxShadow: "0 19px 38px rgba(0, 0, 0, 0.36), 0 15px 12px rgba(0, 0, 0, 0.77)",
+    
+  },
+});

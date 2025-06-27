@@ -44,14 +44,8 @@ const HomeScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Text>To-Do List</Text>
-      <Input InputValue ={task} Func ={SetTasksFunc} />
-
-            {tasks.map((task, index) => {
-        return <TaskItem key={index} task={task} />;
-      })}
-
-      <Pressable
+      <Input InputValue ={task} Func ={SetTasksFunc} InputPlaceHolder = "Write your task here .." />
+<Pressable
        style={getButtonStyle}
        onPressIn={handlePressIn}
        onPressOut={handlePressOut}
@@ -70,6 +64,11 @@ const HomeScreen = ({ navigation }) => {
         </Text>
      
       </Pressable>
+            {tasks.map((task, index) => {
+        return <TaskItem key={index} task={task} />;
+      })}
+
+      
     </View>
   );
 };
@@ -81,7 +80,7 @@ const styles = StyleSheet.create({
     flex: 1,
     // justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#FFF2E5',
   },
 
   homeButton: {
