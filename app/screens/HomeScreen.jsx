@@ -1,5 +1,12 @@
 import React, { useContext, useState } from "react";
-import { View, Text, Button, StyleSheet, Pressable, TextInput } from "react-native";
+import {
+  View,
+  Text,
+  Button,
+  StyleSheet,
+  Pressable,
+  TextInput,
+} from "react-native";
 import { TaskContext } from "../context/TaskContext";
 import TaskItem from "../components/TaskItem";
 import AddTaskScreen from "./AddTaskScreen";
@@ -7,68 +14,34 @@ import { useTasks } from "../hooks/useTasks";
 import Input from "../components/Input";
 
 const HomeScreen = ({ navigation }) => {
-
   const { tasks } = useContext(TaskContext);
   const [task, setTask] = useState("");
   const { addTask } = useTasks();
 
   const SetTasksFunc = (e) => {
-   return setTask(e)
-  }
-  const [isPressed, setIsPressed] = useState(false);
-  const [isFocused, setIsFocused] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
-  const handleAddTask =  () => {
- addTask(task);
-    setTask(""); 
-    // navigation.goBack();
+    return setTask(e);
   };
-  const handlePressIn = () => setIsPressed(true);
-  const handlePressOut = () => setIsPressed(false);
-  const handleFocus = () => setIsFocused(true);
-  const handleBlur = () => setIsFocused(false);
 
-  const getButtonStyle = ({ pressed }) => {
-    let style = [styles.homeButton];
-    
-    if (pressed || isPressed) {
-      style.push(styles.homeButtonActive);
-    } else if (isHovered) {
-      style.push(styles.homeButtonHover);
-    } else if (isFocused) {
-      style.push(styles.homeButtonFocus);
-    }
-    
-    return style;
+  const handleAddTask = () => {
+    addTask(task);
+    setTask("");
+    // navigation.goBack();
   };
 
   return (
-    <View style={styles.container}>
-      <Input InputValue ={task} Func ={SetTasksFunc} InputPlaceHolder = "Write your task here .." />
-<Pressable
-       style={getButtonStyle}
-       onPressIn={handlePressIn}
-       onPressOut={handlePressOut}
-       onFocus={handleFocus}
-       onBlur={handleBlur}
-       onHoverIn={() => setIsHovered(true)}
-       onHoverOut={() => setIsHovered(false)}
-       onPress={() => handleAddTask()}
-      >
-        
-        <Text style={(pressed)=>[
-          styles.homeTextButton,
-          pressed && styles.homeTextButtonPressed
-        ]}    >
-          Add Task
-        </Text>
-     
-      </Pressable>
-            {tasks.map((task, index) => {
+    <View style={styles.HomeContainer}>
+      <View style={styles.InputButtonContainer}>
+        <Input
+          InputValue={task}
+          Func={SetTasksFunc}
+          InputPlaceHolder="Write your task here .."
+        />
+
+        <AddTaskScreen handleTask={handleAddTask} />
+      </View>
+      {tasks.map((task, index) => {
         return <TaskItem key={index} task={task} />;
       })}
-
-      
     </View>
   );
 };
@@ -76,58 +49,20 @@ const HomeScreen = ({ navigation }) => {
 export default HomeScreen;
 
 const styles = StyleSheet.create({
-  container: {
+  HomeContainer: {
     flex: 1,
-    // justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#FFF2E5',
+    alignItems: "center",
+    backgroundColor: "#FFF2E5",
+    width: "100%",
+    padding: 20,
   },
+  InputButtonContainer: {
+    flexDirection: "row", // This makes children align horizontally
+    justifyContent: "space-between",
+    width: "100%", // Adjust as needed
+    marginBottom : 30,
+    // borderBottomWidth: 2,
+    // borderBottomColor : "white"
 
-  homeButton: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#fcfcfd',
-    borderRadius: 4,
-    borderWidth: 0,
-    shadowColor: 'rgba(45, 35, 66, 0.2)',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 1,
-    shadowRadius: 4,
-    elevation: 4,
-    paddingHorizontal: 16,
-    height: 48,
-  },
-  homeTextButton: {
-    color: '#36395a',
-    fontSize: 18,
-    lineHeight: 1,
-  },
-  homeTextButtonPressed: {
-    // Add any text-specific pressed styles if needed
-  },
-  homeButtonHover: {
-    transform: [{ translateY: -2 }],
-    shadowColor: 'rgba(45, 35, 66, 0.3)',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 1,
-    shadowRadius: 8,
-    elevation: 8,
-  },
-  homeButtonFocus: {
-    shadowColor: 'rgba(45, 35, 66, 0.4)',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 1,
-    shadowRadius: 4,
-    elevation: 6,
-    borderColor: '#d6d6e7',
-    borderWidth: 1.5,
-  },
-  homeButtonActive: {
-    transform: [{ translateY: 2 }],
-    shadowColor: '#d6d6e7',
-    shadowOffset: { width: 0, height: 3 },
-    shadowOpacity: 1,
-    shadowRadius: 7,
-    elevation: 3,
   },
 });

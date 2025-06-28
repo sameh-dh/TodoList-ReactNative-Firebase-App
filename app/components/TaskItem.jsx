@@ -1,30 +1,35 @@
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
-import React from 'react'
+import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import React from "react";
 
-
-const TaskItem = ({task}) => {
+const TaskItem = ({ task }) => {
   return (
-    <View style={{ width: "100%",  alignItems: "center" }}>
+    <View style={styles.TextContainer}>
       <Text style={styles.Text}>{task}</Text>
     </View>
-  )
-}
+  );
+};
 
-
-export default TaskItem
+export default TaskItem;
 
 const styles = StyleSheet.create({
+  TextContainer: {
+    width: "100%",
+    alignItems: "center",
+  },
   Text: {
-    backgroundColor: "#FFD449",
-    opacity: 0.48,
-    marginTop: 5,
+    backgroundColor: "#FFECD9",
+    
+    marginTop: 0,
     marginBottom: 5,
-    width: "80%",
-    color: "#FF8000",
+    width: "100%",
+    color: "#EE995A",
     textAlign: "center",
     textAlignVertical: "center",
-    borderRadius: 5,
-    height : "fit",
-    padding: 9
+    borderRadius: 12,
+    height: "fit",
+    padding: 9,
+    borderWidth : 1 ,
+    borderColor: "white",
+     fontWeight: 700,
   },
 });
